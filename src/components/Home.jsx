@@ -1,5 +1,7 @@
 import React, { useCallback, useLayoutEffect, useState } from 'react'
 
+import { selections } from '../data'
+
 import Question from './Question'
 import Team from './Team'
 import SortTeam from './SortTeam'
@@ -8,16 +10,19 @@ import listQuestion from '../data'
 import { listTeam } from '../data'
 
 import "../App.css"
+import Picture from './Picture'
 function Home() {
   const [newListTeam, setNewListTeam] = useState(listTeam)
   const [newListQuestion, setNewListQuestion] = useState(listQuestion)
   const [activeTeam, setActiveTeam] = useState(1);
   const [crrQuestion, setCrrQuestion] = useState(newListQuestion[0])
-  const [correct, setCorrect] = useState(false)
+  const [correct, setCorrect] = useState(2)
   const [showTeam, setShowTeam] = useState(false)
+  const [showQuestion, setShowQuestion] = useState(false)
+  const [listSelection, setListSelection] = useState(selections)
 
   const handleNextQuestion = useCallback((e) => {
-
+    console.log(e.keyCode);
     if (e.keyCode === 13) {
       setActiveTeam((prev) => prev < 3 ? prev + 1 : 1)
       setCrrQuestion((prev) => {
@@ -28,10 +33,11 @@ function Home() {
         else return newListQuestion[0]
       })
       setCorrect(false)
+      setShowQuestion(false)
     } else if (e.keyCode === 32) {
       setActiveTeam((prev) => prev < 3 ? prev + 1 : 1)
 
-    } else if (e.keyCode === 17) {
+    } else if (e.keyCode === 27) {
       const specailQuestion = {
         id: crrQuestion.id + 1,
         nameQuestion: "Will you give our team 8 point",
@@ -64,7 +70,7 @@ function Home() {
           : <SortTeam setShowTeam={setShowTeam} setTeam={setNewListTeam} team={newListTeam} />
       }
       {
-        <Question
+        showQuestion ? <Question
           question={crrQuestion}
           setQuestion={setCrrQuestion}
           lengthListQuestion={listQuestion.length}
@@ -75,6 +81,13 @@ function Home() {
           correct={correct}
           listTeam={newListTeam}
           showTeam={showTeam}
+          setListSelection={setListSelection}
+        /> : showTeam && <Picture
+          setShowQuestion={setShowQuestion}
+          setCrrQuestion={setCrrQuestion}
+          setListSelection={setListSelection}
+          listSelection={listSelection}
+
         />
       }
 

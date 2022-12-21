@@ -3,13 +3,18 @@ import listQuestion, { listPoints } from '../data'
 import '../App.css'
 import Notification from './Notification'
 import AnswerItem from './AnswerItem'
-function Question({ question, setQuestion, setActiveTeam, setNewListTeam, activeTeam, setCorrect, correct, listTeam, showTeam }) {
+function Question({ question, setQuestion, setActiveTeam, setNewListTeam, activeTeam, setCorrect, correct, listTeam, showTeam, setListSelection }) {
   const [checkAnswer, setCheckAnswer] = useState([NaN, NaN, NaN, NaN])
   const [points, setPoints] = useState(listPoints[Math.floor(Math.random() * listPoints.length)])
   const [showNote, setShowNote] = useState(false)
   const [showQuestion, setShowQuestion] = useState(false)
   const handleAnswer = (answer, index) => {
     if (question.correct.includes(answer)) {
+
+      setListSelection((prev => {
+
+        return prev.map(item => item.id === question.id ? { ...item, selected: true } : item)
+      }))
 
       setShowNote(false)
       setTimeout(() => {
@@ -53,7 +58,7 @@ function Question({ question, setQuestion, setActiveTeam, setNewListTeam, active
       let check = checkAnswer
       check[index] = false
 
-      setActiveTeam((prev) => (prev < 3 && question.answer.length === 1) ? prev + 1 : question.answer.length > 1 ? prev : 1)
+      setActiveTeam((prev) => (prev < 3 && question.correct.length < 4) ? prev + 1 : question.correct.length === 4 ? prev : 1)
 
       setCheckAnswer((prev) => prev.map((item, indexPrev) => indexPrev === index ? false : item))
 
@@ -61,21 +66,7 @@ function Question({ question, setQuestion, setActiveTeam, setNewListTeam, active
     }
 
   }
-  useEffect(() => {
-    if (checkAnswer.filter(item => isNaN(item)).length === 1) {
-      setTimeout(() => {
-        setQuestion((prev) => {
-          const crrIndex = listQuestion.indexOf(prev)
-          if (crrIndex < listQuestion.length - 1) {
-            return listQuestion[crrIndex + 1]
-          }
-          else return listQuestion[0]
-        })
-      }, 1000)
 
-    }
-
-  }, [checkAnswer, setQuestion])
   useLayoutEffect(() => {
 
     setTimeout(() => {
@@ -86,7 +77,7 @@ function Question({ question, setQuestion, setActiveTeam, setNewListTeam, active
     setCheckAnswer([NaN, NaN, NaN, NaN])
     setPoints(listPoints[Math.floor(Math.random() * listPoints.length)])
 
-    setCorrect(false)
+    setCorrect(2)
 
     return () => {
       setShowNote(false)

@@ -129,14 +129,47 @@ const listQuestion = [
     },
     {
         id: 13,
-        nameQuestion: 'Đặc điểm nào sau đây không đúng với lãnh thổ nước ta ?',
+        nameQuestion: 'Trong thời kì khủng hoảng kinh tế thế giới 1929 - 1933, có bao nhiêu công nhân ở Bắc Kì Việt Nam bị sa thải ?',
         answer: {
-            A: "Nằm hoàn toàn trong vùng nhiệt đới nửa cầu Bắc ",
-            B: "Nằm trọn trong múi giờ số 8 ",
-            C: "Nằm trong vùng có khí hậu nhiệt đới ẩm gió mùa",
-            D: "Nằm trong vùng chịu ảnh hưởng của gió Mậu dịch "
+            A: "2500 người.  ",
+            B: "5000 người. ",
+            C: "52000 người. ",
+            D: "25000 người. "
+        },
+        correct: "D",
+    },
+    {
+        id: 14,
+        nameQuestion: ' Phong trào cách mạng 1930 – 1931 ở Việt Nam phát triển mạnh mẽ nhất ở ?',
+        answer: {
+            A: "Hà Nội - Hải Phòng ",
+            B: "Hải Phòng - Quảng Ninh ",
+            C: "Sài Gòn - Chợ Lớn",
+            D: "Nghệ An - Hà Tĩnh. "
         },
         correct: "B",
+    },
+    {
+        id: 15,
+        nameQuestion: 'Sang tháng 9/1930, phong trào cách mạng Việt Nam dâng cao nhất ở hai tỉnh ?',
+        answer: {
+            A: "Nghệ An và Hà Tĩnh ",
+            B: "Hà Nội và Hải Phòng ",
+            C: "Huế và Đà Nẵng",
+            D: "Sài Gòn và Huế "
+        },
+        correct: "A",
+    },
+    {
+        id: 16,
+        nameQuestion: 'Mâu thuẫn cơ bản trong xã Hội Việt Nam trong thời kì khủng hoảng kinh tế 1929 – 1933 là ?',
+        answer: {
+            A: "mâu thuẫn giữa giai cấp công nhân với tư sản, giữa nông dân với địa chủ phong kiến.",
+            B: "mâu thuẫn giữa giai cấp công nhân với tư sản, giữa nông dân với địa chủ phong kiến. ",
+            C: "mâu thuẫn giữa nhân dân Việt Nam với thực dân Pháp, giữa giai cấp công nhân với giai cấp tư sản.",
+            D: "mâu thuẫn giữa dân tộc Việt Nam với thực dân Pháp, giữa nông dân với địa chủ phong kiến. "
+        },
+        correct: "D",
     },
 
 ]
@@ -159,5 +192,61 @@ export const listTeam = [{
 }]
 export const listPoints = [10, 5, 20, -5, 15, 10, 5, 20, -5, 15, 10, 5, 20, -5, 15, 10, 5, 20, -5, 15, 10, 5, 20, -5, 15, 10, 5, 20, -5, 15, 10, 5, 20, -5, 15, 10, 5, 20, -5, 15]
 
+export const selections = [
+    {
+        id: 1,
+        selected: false,
+    },
+    {
+        id: 2,
+        selected: false,
+    }, {
+        id: 3,
+        selected: false,
+    }, {
+        id: 4,
+        selected: false,
+    }, {
+        id: 5,
+        selected: false,
+    }, {
+        id: 6,
+        selected: false,
+    }, {
+        id: 7,
+        selected: false,
+    }, {
+        id: 8,
+        selected: false,
+    }, {
+        id: 9,
+        selected: false,
+    }, {
+        id: 10,
+        selected: false,
+    },
+    {
+        id: 11,
+        selected: false,
+    }, {
+        id: 12,
+        selected: false,
+    },
+    {
+        id: 13,
+        selected: false,
+    },
+    {
+        id: 14,
+        selected: false,
+    },
+    {
+        id: 15,
+        selected: false,
+    }, {
+        id: 16,
+        selected: false,
+    },
+]
 
 export default listQuestion
