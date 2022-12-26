@@ -1,178 +1,504 @@
+
 const listQuestion = [
     {
         id: 1,
-        nameQuestion: 'Ứng với công thức C4H8O2 có bao nhiêu este là đồng phân của nhau ?',
+        nameQuestion: "Why did the titanic sink?",
         answer: {
-            A: "2",
-            B: "3",
-            C: "4",
-            D: "5"
-        },
-        correct: "C",
-    },
-    {
-        id: 2,
-        nameQuestion: 'Este có mùi dứa là?',
-        answer: {
-            A: "isoamyl axetat",
-            B: "etyl butirat",
-            C: "etyl axetat",
-            D: "geranyl axctat"
-        },
-        correct: "B",
-    },
-    {
-        id: 3,
-        nameQuestion: 'Este nào sau đây khi phản ứng với dung dịch NaOH dư, đun nóng không tạo ra hai muối?',
-        answer: {
-            A: "C6H5COOC6H5 (phenyl benzoat)",
-            B: "CH3COO-[CH2]2-OOCCH2CH3",
-            C: "CH3OOC-COOCH",
-            D: "CH3COOC6H5 (phenyl axetat)"
-        },
-        correct: "C",
-    },
-    {
-        id: 4,
-        nameQuestion: 'Đun nóng este HCOOCH3 với một lượng vừa đủ dung dịch NaOH, sản phẩm thu được là?',
-        answer: {
-            A: "CH3COONa và C2H5OH",
-            B: "HCOONa và CH3OH",
-            C: "HCOONa và C2H5OH",
-            D: "CH3COONa và CH3OH"
-        },
-        correct: "B",
-    },
-    {
-        id: 5,
-        nameQuestion: 'Este X chứa vòng benzen có công thức phân từ là C8H8C2. số công thức cấu tạo của X là ',
-        answer: {
-            A: "3",
-            B: "4",
-            C: "5",
-            D: "6"
+            A: "Encounter big fish",
+            B: "Sunk by another ship",
+            C: "Crash into the reef",
+            D: "Crash into the iceberg",
         },
         correct: "D",
     },
     {
-        id: 6,
-        nameQuestion: 'Xà phòng hoá chất nào sau đây thu được glixerol?',
+        id: 2,
+        nameQuestion: "How many functioning chimneys does the titanic ship have?",
         answer: {
-            A: "tristearin",
-            B: "metyl axetat",
-            C: "metyl fomat",
-            D: "benzyl axetat"
+            A: "2",
+            B: "4",
+            C: "5",
+            D: "3",
+        },
+        correct: "D",
+    },
+    {
+        id: 3,
+        nameQuestion: "What year was the titanic wreck found?",
+        answer: {
+            A: "1983",
+            B: "1985",
+            C: "1987",
+            D: "1990",
+        },
+        correct: "B",
+    },
+    {
+        id: 4,
+        nameQuestion: "How many lifeboats can the titanic hold?",
+        answer: {
+            A: "45",
+            B: "50",
+            C: "60",
+            D: "65",
+        },
+        correct: "D",
+    },
+    {
+        id: 5,
+        nameQuestion: "What is the main reason that many people die when the titanic ship sinks ?",
+        answer: {
+            A: "Cold weather",
+            B: "Lifeboat is missing",
+            C: "Shark",
+            D: "Impact",
+        },
+        correct: "B",
+    },
+    {
+        id: 6,
+        nameQuestion: "Why can't titanic ships dodge icebergs?",
+        answer: {
+            A: "It is too big",
+            B: "Too time to dodge",
+            C: "Not enough coal",
+            D: "The iceberg is too big",
         },
         correct: "A",
     },
     {
         id: 7,
-        nameQuestion: 'Chất nào sau đây có phân tử khối lớn nhất ?',
+        nameQuestion: "What is the reason that people take the titanic ship?",
         answer: {
-            A: "triolein ",
-            B: "tripanmitin ",
-            C: " tristearin",
-            D: "trilinolein"
+            A: "America dream",
+            B: "Study abroad",
+            C: "India dream",
+            D: "China dream",
         },
         correct: "B",
     },
     {
         id: 8,
-        nameQuestion: 'Nước ta nằm ở vị trí: ?',
+        nameQuestion: "What is the chemical formula of water?",
         answer: {
-            A: "rìa phía Đông của bán đảo Đông Dương ",
-            B: "rìa phía Tây của bán đảo Đông Dương ",
-            C: "trung tâm châu Á",
-            D: "phía đông Đông Nam Á"
+            A: "HO",
+            B: "H2O",
+            C: "H2O2",
+            D: "HO2",
+        },
+        correct: "B",
+    }, {
+        id: 9,
+        nameQuestion: "What is the name of the river associated with Egyptian civilization?",
+        answer: {
+            A: "Nile river",
+            B: "Amazon river",
+            C: "Hang river",
+            D: "An river",
         },
         correct: "A",
     }, {
-        id: 9,
-        nameQuestion: 'Nằm ở rìa phía Đông của bán đảo Đông Dương là nước: ?',
-        answer: {
-            A: "Lào ",
-            B: "Campuchia ",
-            C: "Việt Nam",
-            D: "Mi-an-ma"
-        },
-        correct: "C",
-    }, {
         id: 10,
-        nameQuestion: 'Điểm cực Bắc của nước ta là xã Lũng Cú thuộc tỉnh: ?',
+        nameQuestion: "How many years has the titanic ship sunk to this day?",
         answer: {
-            A: "Cao Bằng ",
-            B: " Hà Giang ",
-            C: "Yên Bái",
-            D: "Lạng Sơn"
+            A: "110",
+            B: "111",
+            C: "109",
+            D: "112",
         },
-        correct: "B",
+        correct: "A",
     }, {
         id: 11,
-        nameQuestion: 'Điểm cực Đông của nước ta là xã Vạn Thạnh thuộc tỉnh: ?',
+        nameQuestion: "How many liters of water should you drink per day?",
         answer: {
-            A: " Ninh Thuận ",
-            B: " Khánh Hòa ",
-            C: " Đà Nẵng",
-            D: "Phú Yên"
+            A: "2l",
+            B: "4l",
+            C: "1.5l",
+            D: "1l",
         },
-        correct: "B",
+        correct: "A",
     }, {
         id: 12,
-        nameQuestion: 'Ở tỉnh Khánh Hòa có một đặc điểm tự nhiên rất đặc biệt là: ?',
+        nameQuestion: "Why does Vietnam have an important position in Southeast Asia?",
         answer: {
-            A: "Là tỉnh duy nhất có nhiều đảo ",
-            B: "Là tỉnh có điểm cực Đông nước ta ",
-            C: "Là tỉnh có nhiều hải sản nhất",
-            D: "Là tỉnh có nhiều than nhất"
+            A: "Many mineral resources",
+            B: "The center of Southeast Asia",
+            C: "A & B are correct",
+            D: "A & B are incorrect",
         },
-        correct: "B",
+        correct: "C",
     },
     {
         id: 13,
-        nameQuestion: 'Trong thời kì khủng hoảng kinh tế thế giới 1929 - 1933, có bao nhiêu công nhân ở Bắc Kì Việt Nam bị sa thải ?',
+        nameQuestion: "How many lifeboats were on titanic when it sank?",
         answer: {
-            A: "2500 người.  ",
-            B: "5000 người. ",
-            C: "52000 người. ",
-            D: "25000 người. "
+            A: "20",
+            B: "25",
+            C: "15",
+            D: "25",
         },
-        correct: "D",
+        correct: "C",
     },
     {
         id: 14,
-        nameQuestion: ' Phong trào cách mạng 1930 – 1931 ở Việt Nam phát triển mạnh mẽ nhất ở ?',
+        nameQuestion: "What is the symbol of the pirates in the past?",
         answer: {
-            A: "Hà Nội - Hải Phòng ",
-            B: "Hải Phòng - Quảng Ninh ",
-            C: "Sài Gòn - Chợ Lớn",
-            D: "Nghệ An - Hà Tĩnh. "
-        },
-        correct: "B",
-    },
-    {
-        id: 15,
-        nameQuestion: 'Sang tháng 9/1930, phong trào cách mạng Việt Nam dâng cao nhất ở hai tỉnh ?',
-        answer: {
-            A: "Nghệ An và Hà Tĩnh ",
-            B: "Hà Nội và Hải Phòng ",
-            C: "Huế và Đà Nẵng",
-            D: "Sài Gòn và Huế "
+            A: "One eye and parrot on the shoulder",
+            B: "A gun on the hand",
+            C: "Feather",
+            D: "Dirty",
         },
         correct: "A",
     },
     {
-        id: 16,
-        nameQuestion: 'Mâu thuẫn cơ bản trong xã Hội Việt Nam trong thời kì khủng hoảng kinh tế 1929 – 1933 là ?',
+        id: 15,
+        nameQuestion: "Who is one of the most famous pirates in the world?",
         answer: {
-            A: "mâu thuẫn giữa giai cấp công nhân với tư sản, giữa nông dân với địa chủ phong kiến.",
-            B: "mâu thuẫn giữa giai cấp công nhân với tư sản, giữa nông dân với địa chủ phong kiến. ",
-            C: "mâu thuẫn giữa nhân dân Việt Nam với thực dân Pháp, giữa giai cấp công nhân với giai cấp tư sản.",
-            D: "mâu thuẫn giữa dân tộc Việt Nam với thực dân Pháp, giữa nông dân với địa chủ phong kiến. "
+            A: "Henry Ford",
+            B: "Henry Morgan ",
+            C: "Henry Kissinger",
+            D: "Henry Cavil",
+        },
+        correct: "B",
+    },
+    {
+        id: 16,
+        nameQuestion: "Why is there a tide?",
+        answer: {
+            A: "Volcano",
+            B: "Geology of the Earth",
+            C: "Moon",
+            D: "Sun",
+        },
+        correct: "C",
+    },
+    {
+        id: 17,
+        nameQuestion: 'Where you can lie on the water ?',
+        answer: {
+            A: "Dead Sea",
+            B: "Red Sea",
+            C: "Lake Retba",
+            D: "Garabogazkol"
+        },
+        correct: "A",
+    }, {
+        id: 18,
+        nameQuestion: 'What percentage of water is in the human body?',
+        answer: {
+            A: "75%",
+            B: "50%",
+            C: "70%",
+            D: "60%"
+        },
+        correct: "D",
+    }, {
+        id: 19,
+        nameQuestion: 'How many gates does the Cuu Long River have? ',
+        answer: {
+            A: "7",
+            B: "9",
+            C: "4",
+            D: "10"
+        },
+        correct: "B",
+    }, {
+        id: 20,
+        nameQuestion: 'What is the bleach used in domestic water filtration?',
+        answer: {
+            A: "NaCl",
+            B: "Cl",
+            C: "NaClO",
+            D: "HCl"
+        },
+        correct: "B",
+    }, {
+        id: 21,
+        nameQuestion: 'Which water is used in industry?',
+        answer: {
+            A: "Water rain",
+            B: "Pure water",
+            C: "Disinfectant water",
+            D: "used water"
+        },
+        correct: "C",
+    }, {
+        id: 22,
+        nameQuestion: 'Where was the biggest river battle in Vietnam?',
+        answer: {
+            A: "Bach Dang river",
+            B: "Hong river",
+            C: "Da river ",
+            D: "Ma river"
+        },
+        correct: "A",
+    }, {
+        id: 23,
+        nameQuestion: 'Does water has an important role in the military?',
+        answer: {
+            A: "Yes",
+            B: "No",
+            C: "Not important",
+            D: "I don't know",
+        },
+        correct: "A",
+    }, {
+        id: 24,
+        nameQuestion: 'Which of the following countries is not bordered by the sea?',
+        answer: {
+            A: "Laos",
+            B: "Cambodia",
+            C: "China",
+            D: "Korea"
+        },
+        correct: "A",
+    }, {
+        id: 25,
+        nameQuestion: 'What is the origin of the Cuu Long River?',
+        answer: {
+            A: "Truong Giang river",
+            B: "Me Kong river",
+            C: "Hoang Ha river",
+            D: "Nile river"
+        },
+        correct: "B",
+    }, {
+        id: 26,
+        nameQuestion: 'Which water is the most used in the city?',
+        answer: {
+            A: "Water rain",
+            B: "Pure water",
+            C: "Disinfectant water",
+            D: "Used water"
+        },
+        correct: "C",
+    },
+    {
+        id: 27,
+        nameQuestion: 'What phenomenon on Bach Dang river helped Ngo Quyen to win?',
+        answer: {
+            A: "Tide",
+            B: "Flood",
+            C: "Flow",
+            D: "Wave"
+        },
+        correct: "A",
+    },
+    {
+        id: 28,
+        nameQuestion: 'Which sea is the largest in the world?',
+        answer: {
+            A: "Arctic Ocean",
+            B: "Indian Ocean",
+            C: "Pacific",
+            D: "Atlantic"
+        },
+        correct: "C",
+    }, {
+        id: 29,
+        nameQuestion: 'Who discovered the pacific?',
+        answer: {
+            A: "Magellan",
+            B: "Colombo",
+            C: "Hitler",
+            D: "Newton"
+        },
+        correct: "A",
+    }, {
+        id: 30,
+        nameQuestion: 'Why does water conduct electricity?',
+        answer: {
+            A: "it has electrons",
+            B: "its essence",
+            C: "has impurities",
+            D: "A & C"
+        },
+        correct: "C",
+    }, {
+        id: 31,
+        nameQuestion: 'Why is it raining?',
+        answer: {
+            A: "Sun cry",
+            B: "condensing, evaporating",
+            C: "supernatural",
+            D: "Nobody know"
+        },
+        correct: "B",
+    }, {
+        id: 32,
+        nameQuestion: 'Which freshwater lake is the largest natural in Vietnam?',
+        answer: {
+            A: "Tay lake",
+            B: "Thac Ba lake",
+            C: "Guom lake",
+            D: "Ba Be lake"
+        },
+        correct: "D",
+    }, {
+        id: 33,
+        nameQuestion: 'What is the name of one of sea in Vietnam?',
+        answer: {
+            A: "Red Sea",
+            B: "East Sea",
+            C: "Dead Sea",
+            D: "North Sea"
+        },
+        correct: "B",
+    }, {
+        id: 34,
+        nameQuestion: 'What is the longest river in Vietnam?',
+        answer: {
+            A: "Sai Gon river",
+            B: "Dong Nai river",
+            C: "Hong river",
+            D: "Da river"
+        },
+        correct: "B",
+    }, {
+        id: 35,
+        nameQuestion: 'What is the drink that young people drink the most?',
+        answer: {
+            A: "Milk tea",
+            B: "Coffee",
+            C: "Tea",
+            D: "Soft drink"
+        },
+        correct: "A",
+    }, {
+        id: 36,
+        nameQuestion: 'Who is Henry Morgan?',
+        answer: {
+            A: "Writer",
+            B: "Pirates",
+            C: "Sailor",
+            D: "Soldiers"
+        },
+        correct: "B",
+    }, {
+        id: 37,
+        nameQuestion: 'Currently, what percentage of clean water is left?',
+        answer: {
+            A: "5%",
+            B: "1%",
+            C: "3%",
+            D: "7%"
+        },
+        correct: "C",
+    }, {
+        id: 38,
+        nameQuestion: 'What is the use of water in industry?',
+        answer: {
+            A: "Ingredient",
+            B: "Raw material cleaning",
+            C: "Both are correct",
+            D: "Both are incorrect"
+        },
+        correct: "C",
+    }, {
+        id: 39,
+        nameQuestion: 'What is another name for Truong Giang River?',
+        answer: {
+            A: "Duong Tu river",
+            B: "Ha Giang river",
+            C: "Hoang Ha river",
+            D: "Hong Ha river"
+        },
+        correct: "A",
+    }, {
+        id: 40,
+        nameQuestion: 'What water sport can\'t you play alone',
+        answer: {
+            A: "Rowing",
+            B: "Windsurfing",
+            C: "Water-skiing",
+            D: "Jet-skiing"
+        },
+        correct: "C",
+    }, {
+        id: 41,
+        nameQuestion: 'What do whale sharks eat?',
+        answer: {
+            A: "Other fish",
+            B: "Seaweed",
+            C: "Zooplankton",
+            D: "A & B"
+        },
+        correct: "C",
+    }, {
+        id: 42,
+        nameQuestion: 'What species is a whale?',
+        answer: {
+            A: "Cold blooded animals",
+            B: "Vertebrates",
+            C: "Fish",
+            D: "Mammal"
+        },
+        correct: "D",
+    }, {
+        id: 43,
+        nameQuestion: 'Which fish is the biggest that ever existed?',
+        answer: {
+            A: "Megalodon",
+            B: "White shark",
+            C: "Whale",
+            D: "Whale sharks"
+        },
+        correct: "A",
+    }, {
+        id: 44,
+        nameQuestion: 'What sport needs an oxygen tank?',
+        answer: {
+            A: "Diving",
+            B: "Windsurfing",
+            C: "Water-skiing",
+            D: "Jet-skiing"
+        },
+        correct: "A",
+    }, {
+        id: 45,
+        nameQuestion: 'What kind of boat needs wind to move?',
+        answer: {
+            A: "Ca no",
+            B: "Yacht",
+            C: "Battleship",
+            D: "Ship"
+        },
+        correct: "B",
+    }, {
+        id: 46,
+        nameQuestion: 'What kind of shark doesn\'t eat meat?',
+        answer: {
+            A: "White shark",
+            B: "Whale sharks",
+            C: "Angelshark",
+            D: "Dusky Shark"
+        },
+        correct: "B",
+    }, {
+        id: 47,
+        nameQuestion: 'What happened on April 10, 1912?',
+        answer: {
+            A: "The titanic ship launched",
+            B: "Titanic ship sunk",
+            C: "Titanic wreck found",
+            D: "Titanic wreck recovered"
+        },
+        correct: "A",
+    }, {
+        id: 48,
+        nameQuestion: 'Who found the titanic wreck?',
+        answer: {
+            A: "Comlobo",
+            B: "Robet Balard",
+            C: "James Camron",
+            D: "Robert Ballard"
         },
         correct: "D",
     },
 
 ]
+
+export default listQuestion
 
 export const listTeam = [{
     name: "Team 1",
@@ -185,7 +511,7 @@ export const listTeam = [{
     rank: 2,
     id: 2,
 }, {
-    name: "Team 3",
+    name: "Team 4",
     points: 0,
     rank: 3,
     id: 3,
@@ -196,57 +522,200 @@ export const selections = [
     {
         id: 1,
         selected: false,
+        incorrect: false,
     },
     {
         id: 2,
         selected: false,
+        incorrect: false,
     }, {
         id: 3,
         selected: false,
+        incorrect: false,
     }, {
         id: 4,
         selected: false,
+        incorrect: false,
     }, {
         id: 5,
         selected: false,
+        incorrect: false,
     }, {
         id: 6,
         selected: false,
+        incorrect: false,
     }, {
         id: 7,
         selected: false,
+        incorrect: false,
     }, {
         id: 8,
         selected: false,
+        incorrect: false,
     }, {
         id: 9,
         selected: false,
+        incorrect: false,
     }, {
         id: 10,
         selected: false,
+        incorrect: false,
     },
     {
         id: 11,
         selected: false,
+        incorrect: false,
     }, {
         id: 12,
         selected: false,
+        incorrect: false,
     },
     {
         id: 13,
         selected: false,
+        incorrect: false,
     },
     {
         id: 14,
         selected: false,
+        incorrect: false,
     },
     {
         id: 15,
         selected: false,
+        incorrect: false,
     }, {
         id: 16,
         selected: false,
+        incorrect: false,
+    },
+    {
+        id: 17,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 18,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 19,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 20,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 21,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 22,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 23,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 24,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 25,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 26,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 27,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 28,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 29,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 30,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 31,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 32,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 33,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 34,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 35,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 36,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 37,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 38,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 39,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 40,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 41,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 42,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 43,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 44,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 45,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 46,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 47,
+        selected: false,
+        incorrect: false,
+    }, {
+        id: 48,
+        selected: false,
+        incorrect: false,
     },
 ]
-
-export default listQuestion

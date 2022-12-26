@@ -1,16 +1,18 @@
 import React from 'react'
+import Intro from './Intro'
 
 function Guide({ setShowHome }) {
     return (
         <div className='guide'>
-            <p>Chúng ta sẽ có ba team</p>
-            <p>Sẽ chơi một trò chơi nhỏ để quyết định thứ tự chơi của các team</p>
-            <p>Nhập thứ tự chơi vd(231)</p>
-            <p>Chọn ô câu hỏi và trả lời nếu sai thì câu đó sẽ được nhóm khác trả lời</p>
-            <p>Nếu trả lời đúng thì nhóm sẽ được cộng hoặc trừ số điểm ngẫu nhiên</p>
-            <p>Nhóm nào đoán được là hình gì thì chiến thắng </p>
-            <p>Nếu không có nhóm nào đoán được thì nhóm nào cao điểm nhất sẽ thắng</p>
-            <div className='counting' onClick={() => setShowHome(true)}>Tiep tuc</div>
+            <Intro />
+            <p>We will have three teams</p>
+            <p>There will be a mini game to decide the order of the teams</p>
+            <p>Enter play order vd(231)</p>
+            <p>Select the question box and answer if it is wrong, the question will be closed and to the next group </p>
+            <p>If the answer is correct, the group will be added or subtracted a random number of points</p>
+            <p>The group that can guess what the picture is wins</p>
+            <p>If no group guesses, the group with the highest score wins</p>
+            <div className='counting' onClick={() => setShowHome(true)}>Counting</div>
         </div>
     )
 }
