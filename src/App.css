@@ -381,6 +381,9 @@ img {
     background-color: var(--primary-dark);
     color: var(--primary-light);
 }
+.selected {
+    opacity: 0;
+}
 .guide {
     position: fixed;
     top: 0;

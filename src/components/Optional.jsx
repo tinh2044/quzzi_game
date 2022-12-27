@@ -31,7 +31,7 @@ function Optional({ data, setListSelection, setShowQuestion, setCrrQuestion, spe
     return (
         <div
             style={{
-                opacity: data.selected && !data.incorrect ? 0 : 1,
+
                 cursor: `${!data.selected && !data.incorrect ? "pointer" : data.selected && !data.incorrect ? "default" : "not-allowed"}`,
             }}
             index={data.id}

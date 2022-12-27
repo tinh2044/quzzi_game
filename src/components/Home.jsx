@@ -40,6 +40,8 @@ function Home() {
 
     } else if (e.keyCode === 8) {
       setSpecail(true)
+    } else if (e.keyCode === 65) {
+      setListSelection((prev) => prev.map(item => { return { ...item, selected: true } }))
     }
   }, [correct])
 
