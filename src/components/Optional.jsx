@@ -36,7 +36,7 @@ function Optional({ data, setListSelection, setShowQuestion, setCrrQuestion, spe
             }, 100 + 10 * data.id);
         }
 
-    }, [data.selected])
+    }, [data.id, data.incorrect, data.selected])
 
     return (
         <div
