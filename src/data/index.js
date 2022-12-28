@@ -219,7 +219,7 @@ const listQuestion = [
             A: "Water rain",
             B: "Pure water",
             C: "Disinfectant water",
-            D: "used water"
+            D: "Used water"
         },
         correct: "C",
     }, {
@@ -319,8 +319,8 @@ const listQuestion = [
         nameQuestion: 'Why is it raining?',
         answer: {
             A: "Sun cry",
-            B: "condensing, evaporating",
-            C: "supernatural",
+            B: "Condensing, evaporating",
+            C: "Supernatural",
             D: "Nobody know"
         },
         correct: "B",
