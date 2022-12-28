@@ -374,10 +374,9 @@ img {
     justify-content: center;
     font-size: 36px;
     color: var(--primary-dark);
-    transition: background 0.3s linear, color 0.7s linear;
+    transition: background 0.3s linear, color 0.7s linear, opacity 0.5s linear;
 }
-.main-item:hover,
-.selected {
+.main-item:hover {
     background-color: var(--primary-dark);
     color: var(--primary-light);
 }

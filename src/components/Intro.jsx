@@ -33,7 +33,7 @@ function Intro() {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300);
     const [index, setIndex] = useState(1);
-    const toRotate = ["Welcome to Quiz Game", "Was create by group 3", "Enjoy your moment"]
+    const toRotate = ["Welcome to Quiz Game", "Was create by group 3", "Enjoy cái moment này"]
     const period = 2000;
 
     useEffect(() => {

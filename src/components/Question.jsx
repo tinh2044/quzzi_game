@@ -3,14 +3,15 @@ import listQuestion, { listPoints } from '../data'
 import '../App.css'
 import Notification from './Notification'
 import AnswerItem from './AnswerItem'
-function Question({ question, setQuestion, setActiveTeam, setNewListTeam, activeTeam, setCorrect, correct, listTeam, showTeam, setListSelection, specail }) {
+function Question({ question, setQuestion, setActiveTeam, setNewListTeam, activeTeam, setCorrect, correct, listTeam, showTeam, setListSelection, specail, refWinAudio, refLoseAudio }) {
   const [checkAnswer, setCheckAnswer] = useState([NaN, NaN, NaN, NaN])
   const [points, setPoints] = useState(listPoints[Math.floor(Math.random() * listPoints.length)])
   const [showNote, setShowNote] = useState(false)
   const [showQuestion, setShowQuestion] = useState(false)
   const handleAnswer = (answer, index) => {
     if (question.correct.includes(answer)) {
-
+      refWinAudio.current.play()
+      refLoseAudio.current.pause()
       setListSelection((prev => {
 
         return prev.map(item => item.id === question.id ? { ...item, selected: true } : item)
@@ -50,6 +51,9 @@ function Question({ question, setQuestion, setActiveTeam, setNewListTeam, active
 
       setCorrect(true)
     } else {
+      refWinAudio.current.pause()
+      refLoseAudio.current.play()
+
       setShowNote(false)
 
       setListSelection((prev => {

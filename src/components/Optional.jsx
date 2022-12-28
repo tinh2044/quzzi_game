@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../App.css"
 
 function Optional({ data, setListSelection, setShowQuestion, setCrrQuestion, specail, setSpecail, listQuestion }) {
+    const [isSelected, setIsSelected] = useState(false)
     const handleSelection = (id) => {
         if (!data.selected && !specail) {
 
@@ -28,14 +29,23 @@ function Optional({ data, setListSelection, setShowQuestion, setCrrQuestion, spe
             }, 500);
         }
     }
+    useEffect(() => {
+        if (data.selected && !data.incorrect) {
+            setTimeout(() => {
+                setIsSelected(true)
+            }, 100 + 10 * data.id);
+        }
+
+    }, [data.selected])
+
     return (
         <div
             style={{
-
+                // transition: `background 0.3s linear, color 0.7s linear, opacity ${data.id / 10}s linear`,
                 cursor: `${!data.selected && !data.incorrect ? "pointer" : data.selected && !data.incorrect ? "default" : "not-allowed"}`,
             }}
             index={data.id}
-            className={`main-item ${data.selected && !data.incorrect ? "selected" : ""} ${data.incorrect ? "item-incorrect" : ""} `}
+            className={`main-item ${isSelected ? "selected" : ""} ${data.incorrect ? "item-incorrect" : ""} `}
             onClick={() => handleSelection(data.id)}
 
         >{data.id}</div>

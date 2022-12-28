@@ -1,5 +1,6 @@
-import React, { useCallback, useEffect, useLayoutEffect, useState } from 'react'
-
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import win from "../media/win.mp3"
+import lose from "../media/lose.mp3"
 import { selections } from '../data'
 
 import Question from './Question'
@@ -21,6 +22,10 @@ function Home() {
   const [showQuestion, setShowQuestion] = useState(false)
   const [listSelection, setListSelection] = useState(selections)
   const [specail, setSpecail] = useState(false)
+
+  const winAudioRef = useRef(null)
+  const loseAudioRef = useRef(null)
+
   const handleNextQuestion = useCallback((e) => {
     if (e.keyCode === 13) {
       if (!specail) setActiveTeam((prev) => prev < 3 ? prev + 1 : 1)
@@ -61,7 +66,6 @@ function Home() {
       hasIndex.push(index)
 
     }
-    console.log(questions.map((item, index) => { return { ...item, id: index + 1 } }))
     setNewListQuestion(questions.map((item, index) => { return { ...item, id: index + 1 } }))
 
   }, [])
@@ -72,6 +76,10 @@ function Home() {
       }, 3000)
     }
   }, [correct])
+  useEffect(() => {
+    winAudioRef.current.pause()
+    loseAudioRef.current.pause()
+  }, [showQuestion])
   return (
     <div className="home">
       {
@@ -93,6 +101,8 @@ function Home() {
           setListSelection={setListSelection}
           setShowQuestion={setShowQuestion}
           specail={specail}
+          refWinAudio={winAudioRef}
+          refLoseAudio={loseAudioRef}
 
         /> : showTeam && <Picture
           setShowQuestion={setShowQuestion}
@@ -106,7 +116,8 @@ function Home() {
           newListQuestion={newListQuestion}
         />
       }
-
+      <audio src={win} ref={winAudioRef} />
+      <audio src={lose} ref={loseAudioRef} />
 
 
 
